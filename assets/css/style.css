@@ -845,6 +845,23 @@ main {
   margin-bottom: 20px;
 }
 
+.timeline-item-with-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.timeline-logo {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
 .timeline-item-title {
   font-size: var(--fs-6);
   line-height: 1.3;

@@ -58,7 +58,7 @@
           </div>
 
           <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
+            <span>聯絡資訊</span>
 
             <ion-icon name="chevron-down"></ion-icon>
           </button>
@@ -175,12 +175,14 @@
               <strong>熱衷於軟體開發，享受解決程式問題所帶來的成就感</strong>
             </p>
             <p>
-              在研究所期間,我負責實驗室的後端與網頁開發，
-              同時管理專案在 AWS 服務上的部署與維護。
-              從只會基礎程式語言的新手，
-              成長為能獨立完成專案、從建置到部署一手包辦的工程師。
-              我樂於與人溝通，透過交流了解他人的需求，
-              期待未來能持續挑戰自我，不斷成長與精進。
+              在研究所期間，我負責實驗室的後端與網頁開發，
+              從一開始接手大型專案時看不懂專案架構與程式碼，
+              到透過重構專案逐漸理解架構設計與提升程式碼品質的方法，
+              最終成長為能獨立完成專案、從建置到部署一手包辦的工程師。
+              在這過程中，我體會到與團隊成員溝通協作的重要性，
+              透過討論了解彼此需求，共同找出更好的解決方案。
+              不僅提升了自身的技術能力，也培養了溝通協作的軟實力，
+              期待未來能將這些經驗應用在新的挑戰中，持續精進與突破自我
             </p>
           </section>
 
@@ -308,21 +310,21 @@
             </div>
 
             <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  國立臺北科技大學電子工程所計算機組
-                </h4>
-                <span>2024 — 2026</span>
+              <li class="timeline-item timeline-item-with-logo">
+                <img src="./assets/images/school-logos/ntut-logo.png" alt="國立臺北科技大學" class="timeline-logo">
+                <div class="timeline-content">
+                  <h4 class="h4 timeline-item-title">
+                    國立臺北科技大學電子工程所計算機組
+                  </h4>
+                  <span>2024 — 2026</span>
+                </div>
               </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">東吳大學資訊管理系</h4>
-                <span>2021 — 2024</span>
-              </li>
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  淡水商工電子科
-                </h4>
-                <span>2016 — 2019</span>
+              <li class="timeline-item timeline-item-with-logo">
+                <img src="./assets/images/school-logos/scu-logo.gif" alt="東吳大學" class="timeline-logo">
+                <div class="timeline-content">
+                  <h4 class="h4 timeline-item-title">東吳大學資訊管理系</h4>
+                  <span>2021 — 2024</span>
+                </div>
               </li>
             </ol>
           </section>
@@ -339,25 +341,44 @@
             <ol class="timeline-list">
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">國立臺北科技大學時期</h4>
-                <span>深入後端工程師領域，負責 REST API、MongoDB、AWS 服務、Cloudflare 服務等實作開發與維護</span>
+                <span>深入全端工程師領域，負責 REST API、MongoDB、AWS 服務、Cloudflare 服務等實作開發與維護</span>
                 <p class="timeline-text">
-                  <strong>檔案系統：</strong>
+                  <strong>虛擬檔案系統：</strong>
                   <ul>
                     <li><a href="https://github.com/fushun891214/Advance_C_Final_Project" target="_blank" rel="noopener noreferrer">GitHub Repo.</a></li>
-                    <li>使用 C 語言實作模擬 OS 的檔案系統功能，如 vi、ls、mkdir、rm 等常見指令</li>
+                    <li>
+                       是進階 C 語言實務的期末專案，主要目的是要透過 C 語言實作 Virtual File System，包含 vi、ls、mkdir、rm 等指令。
+                       自定義 INode / SuperBlock 資料結構管理 Virtual Disk 的資料分配，
+                       運用 Pointer、Pointer to Pointer、Bitmap、動態記憶體管理等技術
+                    </li>
+                    <li>專案採用分層式模組化架構設計，將功能劃分為三個獨立模組：</li>
+                    <li><strong>核心層 (space.c/h)：</strong>實作虛擬磁碟的底層管理機制，包含 SuperBlock、INode 和 Block 的分配與釋放，提供檔案系統的基礎設施</li>
+                    <li><strong>命令層 (commands.c/h)：</strong>建立在核心層之上，實作使用者命令介面（如 ls, cd, mkdir, rm 等），處理路徑解析、檔案操作及加密儲存功能</li>
+                    <li><strong>編輯器層 (vi.c/h)：</strong>提供類 vi 文字編輯器功能，包含插入、刪除、儲存等操作，展現應用層的複雜功能實作</li>
+                    <li>此架構具有高內聚、低耦合特性，各模組職責明確，便於維護與擴充</li>
                   </ul>
                 </p>
               </li>
 
               <li class="timeline-item">
                 <p class="timeline-text">
-                  <strong>付清吧：</strong>
+                  <strong>付清Bar：</strong>
+                  <strong><a href="https://youtu.be/O5BIyIPJP1Q?si=yKiBYVI9u3izC_13" >Deom 影片</a></strong>
                   <ul>
                     <li><a href="https://github.com/fushun891214/payOffBarServer" target="_blank" rel="noopener noreferrer">GitHub Repo.</a></li>
-                    <li>建立 RESTful API 後端服務，使用 Node.js 的 Express 框架開發，提供支付與結帳功能的 API 服務</li>
-                    <li>採用 MongoDB 儲存資料，並設計各個 Collection 的 Schema 結構</li>
-                    <li>採用 Docker 建置服務環境，RESTful API 及 MongoDB 皆包裝成 Docker Container 部署運行</li>
-                    <li>使用 AWS EC2 及 Cloudflare Tunnel 服務，得以轉發 API 服務給前端調用</li>
+                      <li>是作業系統的期末專案，主要是為了解決外出吃飯時的記帳問題，能夠自動記帳，避免買單人與被買單人遺忘帳款
+                        <ul>
+                          <li>主要有以下幾種功能：</li>
+                        </ul>
+                        <ul>
+                            <li><strong>群組管理：</strong>能夠建立群組管理帳款紀錄，顯示所有被買單人的欠款金額與付款狀態，方便買單人與被買單人共同管理分帳</li>
+                            <li><strong>好友系統：</strong>透過好友ID搜尋功能，讓使用者之間的建立好友關係</li>
+                            <li><strong>付款提醒：</strong>透過即時推播功能，讓買單人透過手機推播提醒被買單人付款</li>
+                            <li><strong>付款狀態：</strong>買單人可在群組內更新被買單人的付款狀態，並透過推播通知被買單人已完成付款</li>
+                        </ul>
+                        在付清Bar 專案中，我負責後端API開發與資料庫結構設計。在好友系統與群組管理功能中，運用了多個資料集之間的關聯設計，
+                        並在後端 API Server 整合 Firebase Cloud Messaging 服務，使前端呼叫 API 時能同步觸發 App 的即時推播通知功能
+                      </li>
                   </ul>
                 </p>
               </li>
@@ -367,7 +388,13 @@
                   <strong>iTalkuTalk：</strong>
                   <ul>
                     <li><a href="https://www.italkutalk.com/" target="_blank" rel="noopener noreferrer">專案網頁連結</a></li>
-                    <li>實驗室專案，負責後端、網頁及雲服務領域</li>
+                    <li><a href="https://apps.apple.com/tw/app/italkutalk/id1263409577" target="_blank" rel="noopener noreferrer">APP Store 連結</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=lab.italkutalk&hl=zh_TW" target="_blank" rel="noopener noreferrer">Google Play 連結</a></li>
+                    <li>iTalkuTalk 是實驗室開發維護的大型語言學習平台，在 Google Play 商店擁有超過100萬次的下載數量。
+                      我在此專案中負責後端API開發、資料庫結構設計及網頁開發，接手並重構前人撰寫的程式碼，並持續依照使用者需求調整與優化功能。
+                      碩一期間，我重構了專案的後台管理系統，原後台採用 EJS 架構開發，但因缺乏交接文件而難以維護，
+                      因此我建立了新專案，改用 Vue 框架重新開發頁面並串接API，大幅提升了後台的 UI 介面與整體效能
+                    </li>
                   </ul>
                 </p>
               </li>
@@ -377,7 +404,13 @@
                   <strong>HomeEasy：</strong>
                   <ul>
                     <li><a href="https://www.homeeasy.app/" target="_blank" rel="noopener noreferrer">專案網頁連結</a></li>
-                    <li>實驗室專案，負責後端、網頁及雲服務領域</li>
+                    <li><a href="https://apps.apple.com/us/app/家易-home-easy-裝潢施工比價平台/id6477271187" target="_blank" rel="noopener noreferrer">APP Store 連結</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=lab.homeeasy" target="_blank" rel="noopener noreferrer">Google Play 連結</a></li>
+                    <li>HomeEasy 是實驗室開發維護的裝潢施工比價平台。提供網頁、Android 及 iOS 多個平台服務。
+                      我在碩二時接手此專案，負責後端API開發、資料庫結構設計及網頁開發，並修正了多個功能與流程上的Bug，
+                      針對專案曝光率不足的問題 ，我研究了 Google Search Console 及 SEO 檢測網站的建議，
+                      優化網頁專案的 SEO 相關設定，大幅提升了專案的整體曝光率
+                    </li>
                   </ul>
                 </p>
               </li>
@@ -389,7 +422,11 @@
                   <strong>股票資料爬蟲：</strong>
                   <ul>
                     <li><a href="https://github.com/fushun891214/Stock_Crawler" target="_blank" rel="noopener noreferrer">GitHub Repo.</a></li>
-                    <li>透過網路爬蟲技術蒐集並分析股票市場資料，運用 Python 進行資料擷取與處理</li>
+                    <li>是資料工程實務與應用的期末專案，主要目標是透過爬蟲技術爬取臺灣證券交易所的資料，
+                        並將所有爬取到的資料儲存至 MongoDB 資料庫中，
+                        後續透過查詢 MongoDB 取得特定股票的成交資訊、收盤價、均價等資料，
+                        並使用 Python 的 Matplotlib 套件進行資料視覺化呈現
+                    </li>
                   </ul>
                 </p>
               </li>
@@ -399,7 +436,10 @@
                   <strong>旅遊網站：</strong>
                   <ul>
                     <li><a href="https://github.com/fushun891214/Travel-Website" target="_blank" rel="noopener noreferrer">GitHub Repo.</a></li>
-                    <li>建立響應式旅遊網站，提供景點資訊展示與行程規劃功能，使用 HTML、CSS 與 JavaScript 開發前端介面</li>
+                    <li>是敏捷開發與實務應用的期末專案，主要目標是透過 Scrum 方法開發旅遊網站，
+                        根據使用者需求，透過密集討論與快速迭代的方式，規劃並設計整個專案流程
+                        最終實作出支援 RWD 響應式顯示及電子郵件驗證功能的旅遊網站專案
+                    </li>
                   </ul>
                 </p>
               </li>
@@ -409,8 +449,10 @@
                   <strong>專題-皮膚識別 APP：</strong>
                   <ul>
                     <li><a href="https://github.com/fushun891214/Skin_Identification_" target="_blank" rel="noopener noreferrer">GitHub Repo.</a></li>
-                    <li>運用影像處理與機器學習技術進行皮膚特徵識別與分類，並採用 Kotlin 實作 Android APP</li>
-                    <li>使用 FireBase 服務串接 Google 帳戶註冊/登入功能，並將使用者資料儲存於 FireBase 雲端 DB 中</li>
+                    <li>是我的大學專題，主要目標是透過手機鏡頭拍攝人體皮膚，辨識出各種皮膚病徵，
+                        提供了註冊登入功能，讓使用者可以記錄並追蹤自身的皮膚健康狀態，
+                        在此專案中，我負責整合皮膚辨識模型及 APP 功能開發，包括實作 Google 第三方註冊/登入功能與使用者資料管理
+                    </li>
                   </ul>
                 </p>
               </li>
