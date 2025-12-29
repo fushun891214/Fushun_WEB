@@ -1,0 +1,27 @@
+# Git 相關
+.git
+.github
+.gitignore
+
+# Node.js 相關
+node_modules
+npm-debug.log
+
+# IDE 相關
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# macOS 相關
+.DS_Store
+Thumbs.db
+
+# 文檔相關
+README.md
+CLAUDE.md
+*.md
+
+# CI/CD 相關
+.github/workflows

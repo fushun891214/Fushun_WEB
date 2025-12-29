@@ -1,0 +1,63 @@
+name: Deploy to EC2
+
+# 觸發條件：當 push 到 main 分支時
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # 允許手動觸發
+
+jobs:
+  deploy:
+    name: Deploy to EC2 Server
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout 代碼
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. SSH 連接到伺服器並部署
+      - name: Deploy to Server via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: ${{ secrets.EC2_PORT }}
+          script: |
+            # 進入專案目錄
+            cd /home/ubuntu/Fushun-WEB
+
+            # 拉取最新代碼
+            git pull origin main
+
+            # 停止並刪除舊容器（如果存在）
+            docker stop fushun-web || true
+            docker rm fushun-web || true
+
+            # 刪除舊映像（可選，節省空間）
+            docker rmi fushun-web:latest || true
+
+            # 建置新的 Docker 映像
+            docker build -t fushun-web:latest .
+
+            # 啟動新容器
+            docker run -d \
+              --name fushun-web \
+              -p 8080:8080 \
+              --restart unless-stopped \
+              fushun-web:latest
+
+            # 清理未使用的 Docker 資源
+            docker system prune -f
+
+      # 3. 部署成功通知
+      - name: Deployment Status
+        if: success()
+        run: echo "✅ 部署成功！網站已更新"
+
+      # 4. 部署失敗通知
+      - name: Deployment Failed
+        if: failure()
+        run: echo "❌ 部署失敗，請檢查錯誤日誌"
