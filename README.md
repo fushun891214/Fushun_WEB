@@ -25,12 +25,18 @@
 
 ```
 Fushun-WEB/
-├── index.html              # 主頁面
+├── index.html              # 主頁面（入口）
+├── components/             # 頁面組件（動態載入）
+│   ├── sidebar.html       # 側邊欄（個人資訊）
+│   ├── navbar.html        # 導覽列
+│   ├── about.html         # 關於我
+│   ├── resume.html        # 履歷
+│   └── portfolio.html     # 個人成績
 ├── assets/
 │   ├── css/
 │   │   └── style.css      # 樣式表
 │   ├── js/
-│   │   └── script.js      # 互動邏輯
+│   │   └── script.js      # 互動邏輯與組件載入
 │   └── images/            # 圖片資源
 ├── Dockerfile             # Docker 建置檔
 ├── .github/
@@ -38,6 +44,22 @@ Fushun-WEB/
 │       └── deploy.yml     # GitHub Actions CI/CD
 └── README.md
 ```
+
+## 🏗️ 架構說明
+
+本專案採用**組件化架構**，透過 JavaScript `fetch()` 動態載入各頁面組件：
+
+```javascript
+// 動態載入組件
+fetch('./components/about.html')
+  .then(response => response.text())
+  .then(html => container.innerHTML = html);
+```
+
+這種架構的優點：
+- **模組化**：各頁面獨立維護
+- **可維護性**：修改單一組件不影響其他部分
+- **程式碼複用**：sidebar、navbar 等共用組件
 
 ## 🚀 本地開發
 
@@ -157,11 +179,15 @@ SSH 連接到 EC2
 
 修改以下檔案來自訂您的作品集：
 
-- **個人資訊**: `index.html` (line 44-135)
-- **技能展示**: `index.html` (line 200-289)
-- **學歷經歷**: `index.html` (line 314-471)
-- **樣式調整**: `assets/css/style.css`
-- **互動行為**: `assets/js/script.js`
+| 檔案 | 內容 |
+|------|------|
+| `components/sidebar.html` | 個人資訊、聯絡方式、社群連結 |
+| `components/about.html` | 關於我、自我介紹 |
+| `components/resume.html` | 學歷、經歷、技能 |
+| `components/portfolio.html` | 個人成績、成績單 |
+| `components/navbar.html` | 導覽列選單 |
+| `assets/css/style.css` | 樣式調整 |
+| `assets/js/script.js` | 互動行為 |
 
 ## 📄 授權
 
