@@ -17,38 +17,26 @@
 
   /* gradient */
 
-  --bg-gradient-onyx: linear-gradient(
-    to bottom right,
-    hsl(0, 0%, 95%) 3%,
-    hsl(0, 0%, 98%) 97%
-  );
-  --bg-gradient-jet: linear-gradient(
-      to bottom right,
+  --bg-gradient-onyx: linear-gradient(to bottom right,
+      hsl(0, 0%, 95%) 3%,
+      hsl(0, 0%, 98%) 97%);
+  --bg-gradient-jet: linear-gradient(to bottom right,
       hsla(0, 0%, 100%, 0.8) 0%,
-      hsla(0, 0%, 98%, 0) 100%
-    ),
+      hsla(0, 0%, 98%, 0) 100%),
     hsl(0, 0%, 97%);
-  --bg-gradient-yellow-1: linear-gradient(
-    to bottom right,
-    hsl(45, 100%, 60%) 0%,
-    hsla(36, 100%, 60%, 0) 50%
-  );
-  --bg-gradient-yellow-2: linear-gradient(
-      135deg,
+  --bg-gradient-yellow-1: linear-gradient(to bottom right,
+      hsl(45, 100%, 60%) 0%,
+      hsla(36, 100%, 60%, 0) 50%);
+  --bg-gradient-yellow-2: linear-gradient(135deg,
       hsla(45, 100%, 60%, 0.3) 0%,
-      hsla(35, 100%, 60%, 0) 59.86%
-    ),
+      hsla(35, 100%, 60%, 0) 59.86%),
     hsl(0, 0%, 97%);
-  --border-gradient-onyx: linear-gradient(
-    to bottom right,
-    hsl(0, 0%, 85%) 0%,
-    hsla(0, 0%, 85%, 0) 50%
-  );
-  --text-gradient-yellow: linear-gradient(
-    to right,
-    hsl(45, 100%, 50%),
-    hsl(35, 100%, 45%)
-  );
+  --border-gradient-onyx: linear-gradient(to bottom right,
+      hsl(0, 0%, 85%) 0%,
+      hsla(0, 0%, 85%, 0) 50%);
+  --text-gradient-yellow: linear-gradient(to right,
+      hsl(45, 100%, 50%),
+      hsl(35, 100%, 45%));
 
   /* solid */
 
@@ -230,6 +218,7 @@ article.active {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -277,8 +266,10 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
+  width: 5px;
+  /* for vertical scrollbar */
+  height: 5px;
+  /* for horizontal scrollbar */
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -686,7 +677,38 @@ main {
 }
 
 /**
- * skills 
+ * transcript
+ */
+
+.transcript-section {
+  margin-top: 30px;
+}
+
+.transcript-section .h3 {
+  margin-bottom: 20px;
+}
+
+.transcript-item {
+  margin-bottom: 25px;
+}
+
+.transcript-item .h4 {
+  margin-bottom: 10px;
+}
+
+.transcript-item iframe {
+  border: 1px solid var(--jet);
+  border-radius: 8px;
+}
+
+.transcript-item img {
+  width: 100%;
+  border: 1px solid var(--jet);
+  border-radius: 8px;
+}
+
+/**
+ * skills
  */
 
 .skills-title {
@@ -1086,6 +1108,11 @@ main {
    * RESET
    */
 
+  body {
+    overflow: hidden;
+    height: 100vh;
+  }
+
   body::-webkit-scrollbar {
     width: 20px;
   }
@@ -1129,17 +1156,21 @@ main {
 
   main {
     max-width: 1200px;
-    margin-inline: auto;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: stretch;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 25px;
+    height: 100vh;
+    padding: 20px;
   }
 
   .main-content {
     min-width: 75%;
     width: 75%;
     margin: 0;
+    height: 100%;
+    overflow-y: auto;
   }
 
   /**
@@ -1148,12 +1179,14 @@ main {
 
   .sidebar {
     position: sticky;
-    top: 60px;
-    max-height: max-content;
-    height: 100%;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    height: fit-content;
+    flex-shrink: 0;
     margin-bottom: 0;
-    padding-top: 60px;
+    padding-top: 0;
     z-index: 1;
+    overflow-y: auto;
   }
 
   .sidebar-info {
