@@ -33,8 +33,16 @@ Fushun-WEB/
 │   ├── resume.html        # 履歷
 │   └── portfolio.html     # 個人成績
 ├── assets/
-│   ├── css/
-│   │   └── style.css      # 樣式表
+│   ├── css/               # 模組化樣式表
+│   │   ├── style.css      # 主入口（@import 所有模組）
+│   │   ├── variables.css  # CSS 變數（顏色、字型、陰影）
+│   │   ├── reset.css      # 瀏覽器重置樣式
+│   │   ├── common.css     # 共用元件樣式
+│   │   ├── sidebar.css    # 側邊欄樣式
+│   │   ├── navbar.css     # 導覽列樣式
+│   │   ├── about.css      # 關於頁面樣式
+│   │   ├── resume.css     # 履歷頁面樣式
+│   │   └── responsive.css # 響應式設計
 │   ├── js/
 │   │   └── script.js      # 互動邏輯與組件載入
 │   └── images/            # 圖片資源
@@ -186,7 +194,7 @@ SSH 連接到 EC2
 | `components/resume.html` | 學歷、經歷、技能 |
 | `components/portfolio.html` | 個人成績、成績單 |
 | `components/navbar.html` | 導覽列選單 |
-| `assets/css/style.css` | 樣式調整 |
+| `assets/css/*.css` | 模組化樣式（依頁面拆分） |
 | `assets/js/script.js` | 互動行為 |
 
 ## 📄 授權
