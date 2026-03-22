@@ -65,9 +65,9 @@
     "education": "Education",
     "portfolio": "Portfolio",
     "ntut": "Computer Engineering, Graduate Institute of Electronic Engineering, National Taipei University of Technology",
-    "ntutYear": "2024 — 2026",
-    "scu": "Dept. of Computer Science & Information Management, Soochow University",
-    "scuYear": "2021 — 2024",
+    "ntutYear": "2024/07 — 2026/08",
+    "scu": "Department of Computer Science and Information Management, Soochow University",
+    "scuYear": "2021/02 — 2024/01",
     "ntutPeriod": {
       "title": "NTUT Period",
       "desc": "Delved into full-stack development, responsible for REST API, MongoDB, AWS services, Cloudflare services implementation and maintenance."
