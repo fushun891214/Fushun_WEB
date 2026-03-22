@@ -17,7 +17,7 @@
   },
   "about": {
     "title": "About Me",
-    "intro1": "Hello, I'm <strong>Fu-Shun Zhang</strong>. I graduated from <strong>Soochow University with a degree in Information Management</strong>, and I'm currently a second-year master's student in the <strong>Computer Division, Graduate Institute of Electronic Engineering at National Taipei University of Technology.</strong>",
+    "intro1": "Hello, I'm <strong>Fu-Shun Zhang</strong>. I graduated from <strong>Dept. of Computer Science & Information Management, Soochow University</strong>, and I'm currently a second-year master's student in the <strong>Computer Engineering, Graduate Institute of Electronic Engineering, National Taipei University of Technology.</strong>",
     "intro2": "<strong>Passionate about software development, I enjoy the sense of accomplishment that comes from solving programming challenges.</strong>",
     "intro3": "During my graduate studies, I was responsible for backend and web development in the lab. Initially, when taking over large projects, I struggled to understand the project architecture and codebase. Through refactoring, I gradually grasped architectural design and methods to improve code quality, ultimately growing into an engineer capable of independently completing projects from development to deployment. Throughout this process, I realized the importance of communication and collaboration with team members. By discussing and understanding each other's needs, we found better solutions together. This not only enhanced my technical skills but also developed my soft skills in communication and collaboration. I look forward to applying these experiences to new challenges, continuously improving and breaking through my limits.",
     "skillsTitle": "Skills",
@@ -64,9 +64,9 @@
     "title": "Resume",
     "education": "Education",
     "portfolio": "Portfolio",
-    "ntut": "National Taipei University of Technology, Graduate Institute of Electronic Engineering, Computer Division",
+    "ntut": "Computer Engineering, Graduate Institute of Electronic Engineering, National Taipei University of Technology",
     "ntutYear": "2024 — 2026",
-    "scu": "Soochow University, Department of Information Management",
+    "scu": "Dept. of Computer Science & Information Management, Soochow University",
     "scuYear": "2021 — 2024",
     "ntutPeriod": {
       "title": "NTUT Period",
