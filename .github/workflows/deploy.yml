@@ -32,22 +32,11 @@ jobs:
             # 拉取最新代碼
             git pull origin main
 
-            # 停止並刪除舊容器（如果存在）
-            docker stop fushun-web || true
-            docker rm fushun-web || true
+            # 停止並移除舊容器
+            docker compose down
 
-            # 刪除舊映像（可選，節省空間）
-            docker rmi fushun-web:latest || true
-
-            # 建置新的 Docker 映像
-            docker build -t fushun-web:latest .
-
-            # 啟動新容器
-            docker run -d \
-              --name fushun-web \
-              -p 8080:8080 \
-              --restart unless-stopped \
-              fushun-web:latest
+            # 建置並啟動所有容器
+            docker compose up -d --build
 
             # 清理未使用的 Docker 資源
             docker system prune -f
