@@ -38,3 +38,107 @@
 .navbar-link.active {
   color: var(--orange-yellow-crayola);
 }
+
+/*-----------------------------------*\
+  #SETTINGS DROPDOWN
+\*-----------------------------------*/
+
+.settings-item {
+  margin-left: 10px;
+}
+
+.settings-dropdown {
+  position: relative;
+}
+
+.settings-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 20px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-gray);
+  font-size: 18px;
+  transition: color var(--transition-1);
+}
+
+.settings-btn:hover,
+.settings-btn:focus {
+  color: var(--orange-yellow-crayola);
+}
+
+/* 手機模式：選單往上彈出 */
+.settings-menu {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin-bottom: 10px;
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 12px;
+  box-shadow: var(--shadow-2);
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-1);
+}
+
+.settings-dropdown.active .settings-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.settings-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 15px;
+  background: transparent;
+  border: none;
+  color: var(--white-2);
+  font-size: var(--fs-8);
+  cursor: pointer;
+  transition: background var(--transition-1);
+}
+
+.settings-menu-item:first-child {
+  border-radius: 12px 12px 0 0;
+}
+
+.settings-menu-item:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+.settings-menu-item:hover {
+  background: var(--onyx);
+}
+
+.lang-check {
+  color: var(--orange-yellow-crayola);
+  opacity: 0;
+  transition: opacity var(--transition-1);
+}
+
+.lang-check.active {
+  opacity: 1;
+}
+
+/* 電腦模式 (>= 1024px)：選單往下彈出 */
+@media (min-width: 1024px) {
+  .settings-menu {
+    bottom: auto;
+    top: 100%;
+    margin-bottom: 0;
+    margin-top: 10px;
+    transform: translateY(-10px);
+  }
+
+  .settings-dropdown.active .settings-menu {
+    transform: translateY(0);
+  }
+}

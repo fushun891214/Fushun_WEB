@@ -1,0 +1,137 @@
+{
+  "sidebar": {
+    "name": "Fu-Shun Zhang",
+    "title": "Full Stack Developer",
+    "showContacts": "Contact Info",
+    "email": "Email",
+    "phone": "Phone",
+    "birthday": "Birthday",
+    "location": "Location",
+    "locationValue": "Tamsui, New Taipei City"
+  },
+  "nav": {
+    "about": "About",
+    "resume": "Resume",
+    "portfolio": "Transcripts",
+    "cv": "CV"
+  },
+  "about": {
+    "title": "About Me",
+    "intro1": "Hello, I'm <strong>Fu-Shun Zhang</strong>. I graduated from <strong>Soochow University with a degree in Information Management</strong>, and I'm currently a second-year master's student in the <strong>Computer Division, Graduate Institute of Electronic Engineering at National Taipei University of Technology.</strong>",
+    "intro2": "<strong>Passionate about software development, I enjoy the sense of accomplishment that comes from solving programming challenges.</strong>",
+    "intro3": "During my graduate studies, I was responsible for backend and web development in the lab. Initially, when taking over large projects, I struggled to understand the project architecture and codebase. Through refactoring, I gradually grasped architectural design and methods to improve code quality, ultimately growing into an engineer capable of independently completing projects from development to deployment. Throughout this process, I realized the importance of communication and collaboration with team members. By discussing and understanding each other's needs, we found better solutions together. This not only enhanced my technical skills but also developed my soft skills in communication and collaboration. I look forward to applying these experiences to new challenges, continuously improving and breaking through my limits.",
+    "skillsTitle": "Skills",
+    "backend": {
+      "title": "Backend Development",
+      "items": [
+        "Proficient in .NET and Express API development.",
+        "Familiar with MVC project architecture.",
+        "Database structure design and maintenance.",
+        "Docker containerization and deployment.",
+        "Version control tools such as Git and GitHub.",
+        "CI/CD automation tools such as Jenkins."
+      ]
+    },
+    "frontend": {
+      "title": "Web Development",
+      "items": [
+        "Proficient in fundamental web technologies: HTML, JS, CSS.",
+        "Web frameworks such as EJS, Vue, and Nuxt.",
+        "Familiar with web rendering modes: CSR and SSR.",
+        "SEO optimization including meta element configuration.",
+        "API integration using axios for HTTP requests.",
+        "Personalized data storage using Local Storage."
+      ]
+    },
+    "cloud": {
+      "title": "Cloud Services",
+      "items": [
+        "Proficient in AWS services: EC2, Load Balancer, Lambda, ECR, S3, etc.",
+        "Proficient in Cloudflare services: Domain registration and management, Cloudflare Tunnel configuration, DNS settings, and Load Balancer integration."
+      ]
+    },
+    "llm": {
+      "title": "LLM Application Development",
+      "items": [
+        "Proficient in environment setup: Ollama, LangChain, LangGraph, etc.",
+        "Experienced in RAG application development.",
+        "Experienced in AI Agent development.",
+        "Experienced in Multi-Agent system development."
+      ]
+    }
+  },
+  "resume": {
+    "title": "Resume",
+    "education": "Education",
+    "portfolio": "Portfolio",
+    "ntut": "National Taipei University of Technology, Graduate Institute of Electronic Engineering, Computer Division",
+    "ntutYear": "2024 — 2026",
+    "scu": "Soochow University, Department of Information Management",
+    "scuYear": "2021 — 2024",
+    "ntutPeriod": {
+      "title": "NTUT Period",
+      "desc": "Delved into full-stack development, responsible for REST API, MongoDB, AWS services, Cloudflare services implementation and maintenance."
+    },
+    "scuPeriod": {
+      "title": "Soochow University Period",
+      "desc": "Learned core programming concepts including programming languages, object-oriented programming, data structures, and operating systems. Completed multiple projects during undergraduate studies."
+    },
+    "projects": {
+      "vfs": {
+        "title": "Virtual File System:",
+        "desc": "Final project for Advanced C Programming. The main goal was to implement a Virtual File System in C, including commands like vi, ls, mkdir, rm. Custom INode/SuperBlock data structures manage Virtual Disk allocation, utilizing Pointer, Pointer to Pointer, Bitmap, and dynamic memory management techniques.",
+        "arch": "The project adopts a layered modular architecture, dividing functionality into three independent modules:",
+        "core": "<strong>Core Layer (space.c/h):</strong> Implements low-level virtual disk management mechanisms, including SuperBlock, INode, and Block allocation and deallocation, providing the file system infrastructure.",
+        "cmd": "<strong>Command Layer (commands.c/h):</strong> Built on top of the core layer, implements user command interfaces (ls, cd, mkdir, rm, etc.), handling path parsing, file operations, and encrypted storage.",
+        "editor": "<strong>Editor Layer (vi.c/h):</strong> Provides vi-like text editor functionality including insert, delete, and save operations, demonstrating complex application-layer implementation.",
+        "summary": "This architecture features high cohesion and low coupling, with clear module responsibilities for easy maintenance and extension."
+      },
+      "payoffbar": {
+        "title": "PayOff Bar:",
+        "desc": "Final project for Operating Systems course. Designed to solve expense tracking when dining out, automatically recording bills to prevent payers and payees from forgetting debts.",
+        "features": "Main features include:",
+        "group": "<strong>Group Management:</strong> Create groups to manage payment records, displaying all payees' outstanding amounts and payment status for easy shared expense management.",
+        "friend": "<strong>Friend System:</strong> Friend ID search functionality enables users to establish friend relationships.",
+        "reminder": "<strong>Payment Reminder:</strong> Real-time push notifications allow payers to remind payees via mobile notifications.",
+        "status": "<strong>Payment Status:</strong> Payers can update payees' payment status within groups and notify payees of completed payments via push notifications.",
+        "role": "In the PayOff Bar project, I was responsible for backend API development and database structure design. In the friend system and group management features, I designed relationships between multiple data collections and integrated Firebase Cloud Messaging into the backend API Server, enabling real-time push notifications when the frontend calls APIs."
+      },
+      "italkutalk": {
+        "title": "iTalkuTalk:",
+        "desc": "iTalkuTalk is a large-scale language learning platform developed and maintained by the lab, with over 1 million downloads on Google Play Store. I was responsible for backend API development, database structure design, and web development in this project. I took over and refactored code written by predecessors, continuously adjusting and optimizing features based on user requirements. During my first year of master's studies, I refactored the project's admin system. The original backend was developed using EJS architecture but was difficult to maintain due to lack of documentation. I established a new project, redeveloping the pages using Vue framework with API integration, significantly improving the admin UI and overall performance."
+      },
+      "homeeasy": {
+        "title": "HomeEasy:",
+        "desc": "HomeEasy is a renovation and construction price comparison platform developed and maintained by the lab, providing services across web, Android, and iOS platforms. I took over this project during my second year of master's studies, responsible for backend API development, database structure design, and web development. I fixed multiple bugs in features and workflows. Addressing the project's low visibility issue, I researched Google Search Console and SEO audit website recommendations, optimizing the web project's SEO configurations and significantly improving overall project visibility."
+      },
+      "stock": {
+        "title": "Stock Data Crawler:",
+        "desc": "Final project for Data Engineering Practices and Applications. The main goal was to use web crawling techniques to scrape data from the Taiwan Stock Exchange, storing all crawled data in MongoDB. Subsequently, querying MongoDB to retrieve specific stock transaction information, closing prices, average prices, and other data, visualizing the data using Python's Matplotlib library."
+      },
+      "travel": {
+        "title": "Travel Website:",
+        "desc": "Final project for Agile Development Practices. The main goal was to develop a travel website using Scrum methodology. Based on user requirements, through intensive discussions and rapid iterations, we planned and designed the entire project workflow, ultimately implementing a travel website project supporting RWD responsive display and email verification functionality."
+      },
+      "skin": {
+        "title": "Senior Project - Skin Identification APP:",
+        "desc": "My undergraduate senior project. The main goal was to identify various skin conditions by capturing images of human skin using a phone camera. The app provides registration and login functionality, allowing users to record and track their skin health status. In this project, I was responsible for integrating the skin identification model and APP functionality development, including implementing Google third-party registration/login and user data management."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Transcripts",
+    "undergraduate": "Undergraduate Transcript",
+    "graduate": "Graduate Transcript",
+    "toeic": "TOEIC Score Report"
+  },
+  "cv": {
+    "title": "CV"
+  },
+  "common": {
+    "githubRepo": "[GitHub Repo.]",
+    "demoVideo": "[Demo Video]",
+    "projectLink": "[Project Website]",
+    "appStore": "[APP Store]",
+    "googlePlay": "[Google Play]"
+  }
+}

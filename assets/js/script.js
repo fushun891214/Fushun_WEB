@@ -42,7 +42,7 @@ async function loadPages(containerId) {
 }
 
 /**
- * 初始化所有元件並設定事件監聽器
+ * 初始化所有元件並設定事件監聯器
  */
 async function initApp() {
   // 載入所有元件
@@ -55,6 +55,11 @@ async function initApp() {
   // 元件載入完成後，初始化事件監聽器
   initSidebar();
   initNavigation();
+
+  // 初始化 i18n 國際化模組
+  if (window.I18n) {
+    await I18n.init();
+  }
 }
 
 // ============================================
