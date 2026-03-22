@@ -25,7 +25,7 @@ async function loadComponent(url, containerId) {
  * @param {string} containerId - 頁面容器元素 ID
  */
 async function loadPages(containerId) {
-  const pages = ['about', 'resume', 'portfolio'];
+  const pages = ['about', 'resume', 'portfolio', 'cv'];
   let allHtml = '';
 
   for (const page of pages) {

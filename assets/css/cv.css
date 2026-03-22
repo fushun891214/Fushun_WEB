@@ -1,0 +1,16 @@
+/*-----------------------------------*\
+  #CV
+\*-----------------------------------*/
+
+.cv-content {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.cv-content embed {
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  border: none;
+  border-radius: 14px;
+}
