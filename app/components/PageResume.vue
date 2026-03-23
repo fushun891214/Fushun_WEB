@@ -42,7 +42,7 @@
         <li class="timeline-item">
           <h4 class="h4 timeline-item-title">{{ $t('resume.ntutPeriod.title') }}</h4>
           <span>{{ $t('resume.ntutPeriod.desc') }}</span>
-          <p class="timeline-text">
+          <div class="timeline-text">
             <strong>{{ $t('resume.projects.vfs.title') }}</strong>
             <ul>
               <li>
@@ -57,11 +57,11 @@
               <li v-html="$t('resume.projects.vfs.editor')"></li>
               <li>{{ $t('resume.projects.vfs.summary') }}</li>
             </ul>
-          </p>
+          </div>
         </li>
 
         <li class="timeline-item">
-          <p class="timeline-text">
+          <div class="timeline-text">
             <strong>{{ $t('resume.projects.payoffbar.title') }}</strong>
             <strong>
               <a href="https://youtu.be/O5BIyIPJP1Q?si=yKiBYVI9u3izC_13">{{ $t('common.demoVideo') }}</a>
@@ -86,11 +86,11 @@
               </li>
               <li>{{ $t('resume.projects.payoffbar.role') }}</li>
             </ul>
-          </p>
+          </div>
         </li>
 
         <li class="timeline-item">
-          <p class="timeline-text">
+          <div class="timeline-text">
             <strong>{{ $t('resume.projects.italkutalk.title') }}</strong>
             <ul>
               <li>
@@ -110,11 +110,11 @@
               </li>
               <li>{{ $t('resume.projects.italkutalk.desc') }}</li>
             </ul>
-          </p>
+          </div>
         </li>
 
         <li class="timeline-item">
-          <p class="timeline-text">
+          <div class="timeline-text">
             <strong>{{ $t('resume.projects.homeeasy.title') }}</strong>
             <ul>
               <li>
@@ -134,13 +134,13 @@
               </li>
               <li>{{ $t('resume.projects.homeeasy.desc') }}</li>
             </ul>
-          </p>
+          </div>
         </li>
 
         <li class="timeline-item">
           <h4 class="h4 timeline-item-title">{{ $t('resume.scuPeriod.title') }}</h4>
           <span>{{ $t('resume.scuPeriod.desc') }}</span>
-          <p class="timeline-text">
+          <div class="timeline-text">
             <strong>{{ $t('resume.projects.stock.title') }}</strong>
             <ul>
               <li>
@@ -150,11 +150,11 @@
               </li>
               <li>{{ $t('resume.projects.stock.desc') }}</li>
             </ul>
-          </p>
+          </div>
         </li>
 
         <li class="timeline-item">
-          <p class="timeline-text">
+          <div class="timeline-text">
             <strong>{{ $t('resume.projects.travel.title') }}</strong>
             <ul>
               <li>
@@ -164,11 +164,11 @@
               </li>
               <li>{{ $t('resume.projects.travel.desc') }}</li>
             </ul>
-          </p>
+          </div>
         </li>
 
         <li class="timeline-item">
-          <p class="timeline-text">
+          <div class="timeline-text">
             <strong>{{ $t('resume.projects.skin.title') }}</strong>
             <ul>
               <li>
@@ -178,7 +178,7 @@
               </li>
               <li>{{ $t('resume.projects.skin.desc') }}</li>
             </ul>
-          </p>
+          </div>
         </li>
       </ol>
     </section>
