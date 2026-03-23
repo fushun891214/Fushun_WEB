@@ -1,208 +1,80 @@
-# Fushun-WEB - 個人作品集網站
+# Fushun-WEB
 
-![GitHub repo size](https://img.shields.io/github/repo-size/fushun891214/Fushun_WEB)
-![GitHub last commit](https://img.shields.io/github/last-commit/fushun891214/Fushun_WEB)
+張富順的個人作品集網站，使用 Nuxt 3 建置，支援 SSR/SSG 渲染與 SEO 優化，並整合中英文語言切換功能。
 
-這是張富順的個人作品集網站，展示學歷、技能、專案經驗與研究所修課紀錄。採用純靜態網站架構，具備完整的響應式設計，支援所有裝置瀏覽。
+## 技術架構
 
-## ✨ 特色
+- **Framework**：Nuxt 3 (SSG 模式)
+- **i18n**：@nuxtjs/i18n，支援繁體中文 / English，URL 不變的 SPA 切換
+- **部署**：Docker multi-stage build，運行於 AWS EC2
+- **CI/CD**：GitHub Actions，push 到 main 自動部署
 
-- 📱 **完全響應式設計** - 支援桌面、平板、手機
-- 🎨 **現代化 UI** - 簡潔優雅的介面設計
-- ⚡ **純靜態網站** - 無需後端，載入速度極快
-- 🐳 **Docker 容器化** - 一鍵部署
-- 🚀 **CI/CD 自動化** - GitHub Actions 自動部署到 EC2
+## 快速啟動
 
-## 🛠️ 技術棧
-
-- **前端**: HTML5, CSS3, JavaScript (Vanilla)
-- **字型**: Google Fonts (Poppins)
-- **圖示**: Ionicons 5.5.2
-- **部署**: Docker + Nginx/http-server
-- **CI/CD**: GitHub Actions
-
-## 📂 專案結構
-
-```
-Fushun-WEB/
-├── index.html              # 主頁面（入口）
-├── components/             # 頁面組件（動態載入）
-│   ├── sidebar.html       # 側邊欄（個人資訊）
-│   ├── navbar.html        # 導覽列
-│   ├── about.html         # 關於我
-│   ├── resume.html        # 履歷
-│   └── portfolio.html     # 個人成績
-├── assets/
-│   ├── css/               # 模組化樣式表
-│   │   ├── style.css      # 主入口（@import 所有模組）
-│   │   ├── variables.css  # CSS 變數（顏色、字型、陰影）
-│   │   ├── reset.css      # 瀏覽器重置樣式
-│   │   ├── common.css     # 共用元件樣式
-│   │   ├── sidebar.css    # 側邊欄樣式
-│   │   ├── navbar.css     # 導覽列樣式
-│   │   ├── about.css      # 關於頁面樣式
-│   │   ├── resume.css     # 履歷頁面樣式
-│   │   └── responsive.css # 響應式設計
-│   ├── js/
-│   │   └── script.js      # 互動邏輯與組件載入
-│   └── images/            # 圖片資源
-├── Dockerfile             # Docker 建置檔
-├── .github/
-│   └── workflows/
-│       └── deploy.yml     # GitHub Actions CI/CD
-└── README.md
-```
-
-## 🏗️ 架構說明
-
-本專案採用**組件化架構**，透過 JavaScript `fetch()` 動態載入各頁面組件：
-
-```javascript
-// 動態載入組件
-fetch('./components/about.html')
-  .then(response => response.text())
-  .then(html => container.innerHTML = html);
-```
-
-這種架構的優點：
-- **模組化**：各頁面獨立維護
-- **可維護性**：修改單一組件不影響其他部分
-- **程式碼複用**：sidebar、navbar 等共用組件
-
-## 🚀 本地開發
-
-### 前置要求
-
-- [Git](https://git-scm.com/downloads)
-- 瀏覽器（Chrome, Firefox, Safari 等）
-
-### 安裝與執行
-
-#### 方法 1：直接開啟（最簡單）
+安裝依賴：
 
 ```bash
-# Clone 專案
-git clone https://github.com/fushun891214/Fushun_WEB.git
-cd Fushun_WEB
-
-# 直接用瀏覽器開啟
-open index.html  # macOS
-start index.html # Windows
+npm install
 ```
 
-#### 方法 2：使用 Python HTTP Server
+啟動開發伺服器（`http://localhost:3000`）：
 
 ```bash
-# Python 3
-python3 -m http.server 8080
-
-# Python 2
-python -m SimpleHTTPServer 8080
-
-# 瀏覽器訪問 http://localhost:8080
+npm run dev
 ```
 
-#### 方法 3：使用 Node.js http-server
+## 建置與部署
+
+產出靜態檔案（SSG）：
 
 ```bash
-# 安裝 http-server
-npm install -g http-server
-
-# 啟動伺服器
-http-server . -p 8080
-
-# 瀏覽器訪問 http://localhost:8080
+npm run generate
+# 輸出至 .output/public/
 ```
 
-#### 方法 4：使用 Docker（推薦用於生產環境）
+本地預覽產出結果：
 
 ```bash
-# 建置 Docker 映像
-docker build -t fushun-web .
-
-# 啟動容器
-docker run -d -p 8080:8080 --name fushun-web fushun-web
-
-# 瀏覽器訪問 http://localhost:8080
+npm run preview
 ```
 
-## 🔄 CI/CD 自動化部署
+### Docker 部署
 
-本專案使用 GitHub Actions 自動部署到 EC2 伺服器。
+```bash
+# 建置 image
+docker build -t fushun-web:latest .
 
-### 部署流程
-
-```
-git push origin main
-    ↓
-GitHub Actions 觸發
-    ↓
-SSH 連接到 EC2
-    ↓
-拉取最新代碼
-    ↓
-重建 Docker 映像
-    ↓
-重啟容器
-    ↓
-✅ 部署完成！
+# 啟動容器（port 8080）
+docker run -d \
+  --name fushun-web \
+  -p 8080:8080 \
+  --restart unless-stopped \
+  fushun-web:latest
 ```
 
-### 設定步驟
+### CI/CD 自動部署
 
-1. **設定 GitHub Secrets**（Repository Settings → Secrets and variables → Actions）
+push 到 `main` 分支後，GitHub Actions 會自動透過 SSH 連入 EC2 執行 build 與部署。
 
-   | Secret 名稱 | 說明 |
-   |------------|------|
-   | `EC2_HOST` | EC2 伺服器 IP 位址 |
-   | `EC2_USERNAME` | SSH 登入用戶名（通常是 `ubuntu`） |
-   | `EC2_SSH_KEY` | SSH 私鑰完整內容 |
-   | `EC2_PORT` | SSH 連接 Port（預設 `22`） |
+所需 GitHub Secrets：
 
-2. **EC2 伺服器準備**
+| Secret | 說明 |
+|--------|------|
+| `EC2_HOST` | EC2 主機 IP |
+| `EC2_USERNAME` | SSH 使用者名稱 |
+| `EC2_SSH_KEY` | SSH 私鑰 |
+| `EC2_PORT` | SSH Port |
 
-   ```bash
-   # 安裝 Docker
-   curl -fsSL https://get.docker.com -o get-docker.sh
-   sudo sh get-docker.sh
-   sudo usermod -aG docker ubuntu
+## 專案結構
 
-   # Clone 專案
-   cd ~
-   git clone https://github.com/fushun891214/Fushun_WEB.git
-   cd Fushun_WEB
-   ```
-
-3. **推送代碼觸發部署**
-
-   ```bash
-   git add .
-   git commit -m "Update content"
-   git push origin main
-   ```
-
-   GitHub Actions 會自動執行部署流程。
-
-## 📝 自訂內容
-
-修改以下檔案來自訂您的作品集：
-
-| 檔案 | 內容 |
-|------|------|
-| `components/sidebar.html` | 個人資訊、聯絡方式、社群連結 |
-| `components/about.html` | 關於我、自我介紹 |
-| `components/resume.html` | 學歷、經歷、技能 |
-| `components/portfolio.html` | 個人成績、成績單 |
-| `components/navbar.html` | 導覽列選單 |
-| `assets/css/*.css` | 模組化樣式（依頁面拆分） |
-| `assets/js/script.js` | 互動行為 |
-
-## 📄 授權
-
-MIT License
-
----
-
-**開發者**: 張富順
-**學歷**: 國立臺北科技大學電子工程所計算機組 (碩二)
-**聯絡方式**: fushun891214@gmail.como
+```
+├── app/
+│   ├── app.vue
+│   ├── assets/css/       # 所有 CSS 樣式
+│   ├── components/       # Vue 元件 (AppSidebar, AppNavbar, Page*)
+│   └── pages/index.vue   # 主頁面，SPA 切換邏輯
+├── i18n/locales/         # 翻譯檔 (zh.json, en.json)
+├── public/images/        # 靜態圖片資源
+├── nuxt.config.ts        # Nuxt 設定、SEO meta、i18n
+└── Dockerfile            # Multi-stage build
+```
