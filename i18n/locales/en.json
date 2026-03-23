@@ -69,11 +69,11 @@
     "scu": "Department of Computer Science and Information Management, Soochow University",
     "scuYear": "2021/02 — 2024/03",
     "ntutPeriod": {
-      "title": "NTUT Period",
+      "title": "National Taipei University of Technology period",
       "desc": "Delved into full-stack development, responsible for REST API, MongoDB, AWS services, Cloudflare services implementation and maintenance."
     },
     "scuPeriod": {
-      "title": "Soochow University Period",
+      "title": "Soochow University period",
       "desc": "Learned core programming concepts including programming languages, object-oriented programming, data structures, and operating systems. Completed multiple projects during undergraduate studies."
     },
     "projects": {

@@ -1,17 +1,19 @@
-# 使用輕量版 Node.js 作為基底映像
+# Stage 1: Build
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run generate
+
+# Stage 2: Serve
 FROM node:20-alpine
 
-# 設定工作目錄
 WORKDIR /app
-
-# 將當前目錄內容複製進容器
-COPY . .
-
-# 全域安裝 http-server
 RUN npm install -g http-server
 
-# 預設使用 8080 port，可改成你要的
-EXPOSE 8080
+COPY --from=builder /app/.output/public ./public
 
-# 啟動 http-server，服務 /app 資料夾內容
-CMD ["http-server", ".", "-p", "8080", "-c-1"]
+EXPOSE 8080
+CMD ["http-server", "./public", "-p", "8080", "-c-1"]

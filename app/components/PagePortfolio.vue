@@ -1,0 +1,44 @@
+<template>
+  <article class="portfolio" data-page="portfolio">
+    <header>
+      <h2 class="h2 article-title">{{ $t('portfolio.title') }}</h2>
+    </header>
+
+    <section class="projects">
+      <div class="transcript-section">
+        <div class="transcript-item">
+          <h4 class="h4">{{ $t('portfolio.undergraduate') }}</h4>
+          <iframe
+            src="https://drive.google.com/file/d/1x6KG0wfyhn3l8BxUbNuExm5QGhRpGS5u/preview"
+            width="100%"
+            height="600"
+            allow="autoplay"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div class="transcript-item">
+          <h4 class="h4">{{ $t('portfolio.graduate') }}</h4>
+          <iframe
+            src="https://drive.google.com/file/d/1fm6N8K4sa3hF5T6KT4cwoBWaxjz9KE2g/preview"
+            width="100%"
+            height="600"
+            allow="autoplay"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div class="transcript-item">
+          <h4 class="h4">{{ $t('portfolio.toeic') }}</h4>
+          <iframe
+            src="https://drive.google.com/file/d/1cn7Se__A2mzFqkbpxQ4oiAXuJRGHWV6u/preview"
+            width="100%"
+            height="600"
+            allow="autoplay"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </article>
+</template>

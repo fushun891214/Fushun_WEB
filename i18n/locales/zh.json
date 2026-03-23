@@ -65,9 +65,9 @@
     "education": "學歷",
     "portfolio": "作品集",
     "ntut": "國立臺北科技大學電子工程所計算機組",
-    "ntutYear": "2024 — 2026",
+    "ntutYear": "2024/07 — 2026/08",
     "scu": "東吳大學資訊管理系",
-    "scuYear": "2021 — 2024",
+    "scuYear": "2021/02 — 2024/03",
     "ntutPeriod": {
       "title": "國立臺北科技大學時期",
       "desc": "深入全端工程師領域，負責 REST API、MongoDB、AWS 服務、Cloudflare 服務等實作開發與維護。"
