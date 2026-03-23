@@ -5,6 +5,12 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/i18n'],
 
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => tag === 'ion-icon'
+    }
+  },
+
   css: ['~/assets/css/style.css'],
 
   i18n: {
