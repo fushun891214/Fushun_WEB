@@ -51,9 +51,9 @@
       ]
     },
     "llm": {
-      "title": "LLM Application Development",
+      "title": "AI Application Development",
       "items": [
-        "Proficient in environment setup: Ollama, LangChain, LangGraph, etc.",
+        "Proficient in LLM environment setup: Ollama or NVIDIA NIM, Google Studio, etc.",
         "Experienced in RAG application development: Vector RAG, Graph RAG, Hybrid RAG, etc.",
         "Experienced in AI Agent development, skilled with Skills, Tools, MCP, etc.",
         "Experienced in Agentic AI development using LangChain, LangGraph, or custom builds like OpenClaw."
