@@ -20,7 +20,7 @@
         <div class="transcript-item">
           <h4 class="h4">{{ $t('portfolio.graduate') }}</h4>
           <iframe
-            src="https://drive.google.com/file/d/1fm6N8K4sa3hF5T6KT4cwoBWaxjz9KE2g/preview"
+            src="https://drive.google.com/file/d/12WYuumsqAQ8tDlSyDPaQCbMdwFW6Np7W/preview"
             width="100%"
             height="600"
             allow="autoplay"
