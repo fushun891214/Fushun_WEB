@@ -6,7 +6,7 @@ const isExpanded = ref(false)
   <aside class="sidebar" :class="{ active: isExpanded }" data-sidebar>
     <div class="sidebar-info">
       <figure class="avatar-box">
-        <img src="/images/my-avatar.jpg" alt="FU-SHUN ZHANG" width="80" />
+        <img src="/images/my-avatar.jpg" alt="FU-SHUN CHANG" width="80" />
       </figure>
 
       <div class="info-content">
