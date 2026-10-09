@@ -396,6 +396,7 @@
 
   article {
     min-height: 100%;
+    box-shadow: none;
   }
 
   /**
@@ -419,6 +420,8 @@
     margin: 0;
     height: 100%;
     overflow-y: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow-5);
   }
 
   /**
