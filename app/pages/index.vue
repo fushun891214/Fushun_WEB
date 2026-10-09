@@ -1,11 +1,16 @@
 <script setup>
 const activePage = ref('about')
+const { t, locale } = useI18n()
+
+useHead(() => ({
+  htmlAttrs: { lang: locale.value === 'zh' ? 'zh-TW' : 'en-US' },
+}))
 
 useSeoMeta({
-  title: '張富順 | 全端工程師',
-  ogTitle: '張富順 | 全端工程師',
-  description: '張富順的個人作品集，全端工程師，熟悉後端開發、雲端服務與 LLM 應用。',
-  ogDescription: '張富順的個人作品集，全端工程師，熟悉 .NET、Vue、Nuxt、AWS 等技術。',
+  title: () => t('seo.title'),
+  ogTitle: () => t('seo.title'),
+  description: () => t('seo.description'),
+  ogDescription: () => t('seo.description'),
   ogImage: '/images/logo.jpg',
 })
 </script>
