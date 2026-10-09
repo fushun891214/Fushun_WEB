@@ -7,21 +7,45 @@
     <section class="timeline">
       <div class="title-wrapper">
         <div class="icon-box">
-          <ion-icon name="book-outline"></ion-icon>
+          <ion-icon name="briefcase-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <h3 class="h3">{{ $t('resume.work') }}</h3>
+      </div>
+
+      <ol class="timeline-list">
+        <li class="timeline-item timeline-item-with-logo">
+          <img
+            src="/images/company-logos/pegatron-logo.jpg"
+            alt=""
+            class="timeline-logo"
+            loading="lazy"
+          />
+          <div class="timeline-content">
+            <h4 class="h4 timeline-item-title">{{ $t('resume.job.title') }}</h4>
+            <span>{{ $t('resume.job.period') }}</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="timeline">
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <ion-icon name="book-outline" aria-hidden="true"></ion-icon>
         </div>
         <h3 class="h3">{{ $t('resume.education') }}</h3>
       </div>
 
       <ol class="timeline-list">
         <li class="timeline-item timeline-item-with-logo">
-          <img src="/images/school-logos/ntut-logo.png" alt="國立臺北科技大學" class="timeline-logo" />
+          <img src="/images/school-logos/ntut-logo.png" alt="" class="timeline-logo" />
           <div class="timeline-content">
             <h4 class="h4 timeline-item-title">{{ $t('resume.ntut') }}</h4>
             <span>{{ $t('resume.ntutYear') }}</span>
           </div>
         </li>
         <li class="timeline-item timeline-item-with-logo">
-          <img src="/images/school-logos/scu-logo.gif" alt="東吳大學" class="timeline-logo" />
+          <img src="/images/school-logos/scu-logo.gif" alt="" class="timeline-logo" />
           <div class="timeline-content">
             <h4 class="h4 timeline-item-title">{{ $t('resume.scu') }}</h4>
             <span>{{ $t('resume.scuYear') }}</span>
@@ -33,7 +57,7 @@
     <section class="timeline">
       <div class="title-wrapper">
         <div class="icon-box">
-          <ion-icon name="book-outline"></ion-icon>
+          <ion-icon name="book-outline" aria-hidden="true"></ion-icon>
         </div>
         <h3 class="h3">{{ $t('resume.portfolio') }}</h3>
       </div>

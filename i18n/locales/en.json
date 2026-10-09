@@ -2,6 +2,7 @@
   "sidebar": {
     "name": "FU-SHUN CHANG",
     "title": "Full Stack Developer",
+    "aiTitle": "AI Engineer",
     "showContacts": "Contact Info",
     "email": "Email",
     "phone": "Phone",
@@ -62,11 +63,18 @@
   },
   "resume": {
     "title": "Resume",
+    "work": "Work",
     "education": "Education",
     "portfolio": "Portfolio",
-    "ntut": "Graduate Institute of Electronic Engineering, National Taipei University of Technology",
+    "job": {
+      "title": "Pegatron Corporation - AI Engineer",
+      "role": "AI Engineer",
+      "company": "Pegatron Corporation",
+      "period": "2026/09 — Present"
+    },
+    "ntut": "National Taipei University of Technology - Graduate Institute of Electronic Engineering",
     "ntutYear": "2024/07 — 2026/08",
-    "scu": "Department of Computer Science and Information Management, Soochow University",
+    "scu": "Soochow University - Department of Computer Science and Information Management",
     "scuYear": "2021/02 — 2024/03",
     "ntutPeriod": {
       "title": "National Taipei University of Technology period",
