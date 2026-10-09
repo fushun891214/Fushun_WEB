@@ -37,6 +37,22 @@ test('localized resume data includes the current job and education format', asyn
   assert.match(en.resume.scu, / - /)
 })
 
+test('localized sidebar data includes both professional tags', async () => {
+  const [zh, en] = await Promise.all([
+    readProjectFile('i18n/locales/zh.json').then(JSON.parse),
+    readProjectFile('i18n/locales/en.json').then(JSON.parse),
+  ])
+
+  assert.equal(zh.sidebar.title, '全端工程師')
+  assert.equal(zh.sidebar.aiTitle, 'AI工程師')
+  assert.equal(en.sidebar.title, 'Full Stack Developer')
+  assert.equal(en.sidebar.aiTitle, 'AI Engineer')
+
+  const sidebarSource = await readProjectFile('app/components/AppSidebar.vue')
+  assert.match(sidebarSource, /\$t\('sidebar\.title'\)/)
+  assert.match(sidebarSource, /\$t\('sidebar\.aiTitle'\)/)
+})
+
 test('resume renders work before education with local decorative assets', async () => {
   const source = await readProjectFile('app/components/PageResume.vue')
 

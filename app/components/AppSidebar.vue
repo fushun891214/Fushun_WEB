@@ -11,7 +11,10 @@ const isExpanded = ref(false)
 
       <div class="info-content">
         <h1 class="name">{{ $t('sidebar.name') }}</h1>
-        <p class="title">{{ $t('sidebar.title') }}</p>
+        <div class="title-list">
+          <p class="title">{{ $t('sidebar.title') }}</p>
+          <p class="title">{{ $t('sidebar.aiTitle') }}</p>
+        </div>
       </div>
 
       <button class="info_more-btn" @click="isExpanded = !isExpanded">
