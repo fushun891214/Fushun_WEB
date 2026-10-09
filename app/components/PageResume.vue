@@ -7,6 +7,30 @@
     <section class="timeline">
       <div class="title-wrapper">
         <div class="icon-box">
+          <ion-icon name="briefcase-outline"></ion-icon>
+        </div>
+        <h3 class="h3">{{ $t('resume.work') }}</h3>
+      </div>
+
+      <ol class="timeline-list">
+        <li class="timeline-item timeline-item-with-logo">
+          <img
+            src="https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/0ca53813b73ed838210cfbe3c6c058c5.jpg"
+            :alt="$t('resume.job.company')"
+            class="timeline-logo"
+            loading="lazy"
+          />
+          <div class="timeline-content">
+            <h4 class="h4 timeline-item-title">{{ $t('resume.job.title') }}</h4>
+            <span>{{ $t('resume.job.period') }}</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="timeline">
+      <div class="title-wrapper">
+        <div class="icon-box">
           <ion-icon name="book-outline"></ion-icon>
         </div>
         <h3 class="h3">{{ $t('resume.education') }}</h3>
@@ -14,14 +38,14 @@
 
       <ol class="timeline-list">
         <li class="timeline-item timeline-item-with-logo">
-          <img src="/images/school-logos/ntut-logo.png" alt="國立臺北科技大學" class="timeline-logo" />
+          <img src="/images/school-logos/ntut-logo.png" :alt="$t('resume.ntut')" class="timeline-logo" />
           <div class="timeline-content">
             <h4 class="h4 timeline-item-title">{{ $t('resume.ntut') }}</h4>
             <span>{{ $t('resume.ntutYear') }}</span>
           </div>
         </li>
         <li class="timeline-item timeline-item-with-logo">
-          <img src="/images/school-logos/scu-logo.gif" alt="東吳大學" class="timeline-logo" />
+          <img src="/images/school-logos/scu-logo.gif" :alt="$t('resume.scu')" class="timeline-logo" />
           <div class="timeline-content">
             <h4 class="h4 timeline-item-title">{{ $t('resume.scu') }}</h4>
             <span>{{ $t('resume.scuYear') }}</span>
