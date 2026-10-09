@@ -33,9 +33,6 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'UTF-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-        { name: 'description', content: '張富順的個人作品集，全端工程師，熟悉後端開發、雲端服務與 LLM 應用。' },
-        { property: 'og:title', content: '張富順 | 全端工程師' },
-        { property: 'og:description', content: '張富順的個人作品集，全端工程師，熟悉 .NET、Vue、Nuxt、AWS 等技術。' },
         { property: 'og:type', content: 'website' }
       ],
       link: [
