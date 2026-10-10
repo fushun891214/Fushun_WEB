@@ -160,8 +160,8 @@
   "common": {
     "githubRepo": "GitHub Repo.",
     "demoVideo": "Demo 影片",
-    "projectLink": "[專案網頁連結]",
-    "appStore": "[APP Store 連結]",
-    "googlePlay": "[Google Play 連結]"
+    "projectLink": "專案網頁連結",
+    "appStore": "APP Store 連結",
+    "googlePlay": "Google Play 連結"
   }
 }
