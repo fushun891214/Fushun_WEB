@@ -44,7 +44,7 @@
 .timeline-logo-frame {
   display: grid;
   place-items: center;
-  width: 72px;
+  width: 90px;
   height: 72px;
   overflow: hidden;
 }
