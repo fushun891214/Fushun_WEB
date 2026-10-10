@@ -76,6 +76,23 @@
       "company": "Pegatron Corporation",
       "period": "2026/09 — Present"
     },
+    "publications": {
+      "title": "Publications",
+      "ragBook": {
+        "title": "Easy RAG Implementation: Building Hallucination-Free LLM and Generative AI with NVIDIA Microservices",
+        "authors": "Shih-Chia Huang, Fu-Shun Chang",
+        "publisher": "DrMaster Press",
+        "publishedAt": "October 2026",
+        "description": {
+          "overview": "In the wave of generative AI, Retrieval-Augmented Generation (RAG) has become a key technology for large language models (LLMs). Because LLMs are limited by the timeliness and coverage of their training data, they can cite outdated information, lack access to private enterprise data, and produce hallucinations. RAG addresses these issues by retrieving information from an external database before generating an answer and providing that context to the model."
+        },
+        "coverAlt": "Cover of Easy RAG Implementation",
+        "stores": {
+          "books": "Buy on Books.com.tw",
+          "tenlong": "Buy at Tenlong Bookstore"
+        }
+      }
+    },
     "ntut": "National Taipei University of Technology - Graduate Institute of Electronic Engineering",
     "ntutYear": "2024/07 — 2026/08",
     "scu": "Soochow University - Department of Computer Science and Information Management",

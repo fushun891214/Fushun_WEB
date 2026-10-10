@@ -193,6 +193,17 @@
     margin-bottom: 25px;
   }
 
+  .publication-entry {
+    grid-template-columns: 72px minmax(0, 1fr);
+    grid-template-areas:
+      "cover title"
+      "cover meta"
+      "cover description"
+      "cover links";
+    column-gap: 16px;
+    row-gap: 10px;
+  }
+
 }
 
 /**

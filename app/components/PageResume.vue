@@ -14,15 +14,71 @@
 
       <ol class="timeline-list">
         <li class="timeline-item timeline-item-with-logo">
-          <img
-            src="/images/company-logos/pegatron-logo.jpg"
-            alt=""
-            class="timeline-logo"
-            loading="lazy"
-          />
+          <div class="timeline-logo-frame timeline-logo-frame--pegatron">
+            <img
+              src="/images/company-logos/pegatron-logo.jpg"
+              alt=""
+              class="timeline-logo"
+              loading="lazy"
+            />
+          </div>
           <div class="timeline-content">
             <h4 class="h4 timeline-item-title">{{ $t('resume.job.title') }}</h4>
             <span>{{ $t('resume.job.period') }}</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="timeline publication-section">
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <h3 class="h3">{{ $t('resume.publications.title') }}</h3>
+      </div>
+
+      <ol class="timeline-list">
+        <li class="timeline-item publication-entry">
+          <figure class="publication-cover">
+            <img
+              src="/images/book-covers/rag-implementation-book-cover.jpg"
+              :alt="$t('resume.publications.ragBook.coverAlt')"
+              loading="lazy"
+            />
+          </figure>
+
+          <h4 class="h4 publication-title">{{ $t('resume.publications.ragBook.title') }}</h4>
+          <p class="publication-meta">
+            <span>{{ $t('resume.publications.ragBook.authors') }}</span>
+            <span aria-hidden="true">｜</span>
+            <span>{{ $t('resume.publications.ragBook.publisher') }}</span>
+            <span aria-hidden="true">｜</span>
+            <time datetime="2026-10">{{ $t('resume.publications.ragBook.publishedAt') }}</time>
+          </p>
+          <div class="publication-description">
+            <p>{{ $t('resume.publications.ragBook.description.overview') }}</p>
+          </div>
+
+          <div class="publication-links">
+            <a
+              class="publication-link"
+              href="https://www.books.com.tw/products/0011063512?sloc=main"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ $t('resume.publications.ragBook.stores.books') }}
+              <ion-icon name="open-outline" aria-hidden="true"></ion-icon>
+            </a>
+            <a
+              class="publication-link"
+              href="https://www.tenlong.com.tw/products/9786264146333?list_name=b-r7-zh_tw"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ $t('resume.publications.ragBook.stores.tenlong') }}
+              <ion-icon name="open-outline" aria-hidden="true"></ion-icon>
+            </a>
           </div>
         </li>
       </ol>
@@ -38,14 +94,18 @@
 
       <ol class="timeline-list">
         <li class="timeline-item timeline-item-with-logo">
-          <img src="/images/school-logos/ntut-logo.png" alt="" class="timeline-logo" />
+          <div class="timeline-logo-frame timeline-logo-frame--ntut">
+            <img src="/images/school-logos/ntut-logo.png" alt="" class="timeline-logo" />
+          </div>
           <div class="timeline-content">
             <h4 class="h4 timeline-item-title">{{ $t('resume.ntut') }}</h4>
             <span>{{ $t('resume.ntutYear') }}</span>
           </div>
         </li>
         <li class="timeline-item timeline-item-with-logo">
-          <img src="/images/school-logos/scu-logo.gif" alt="" class="timeline-logo" />
+          <div class="timeline-logo-frame timeline-logo-frame--scu">
+            <img src="/images/school-logos/scu-logo.gif" alt="" class="timeline-logo" />
+          </div>
           <div class="timeline-content">
             <h4 class="h4 timeline-item-title">{{ $t('resume.scu') }}</h4>
             <span>{{ $t('resume.scuYear') }}</span>
