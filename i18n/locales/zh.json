@@ -82,14 +82,15 @@
         "title": "輕鬆學會 RAG 實作開發：在 NVIDIA 微服務打造零幻覺的 LLM 與生成式 AI",
         "authors": "黃士嘉、張富順",
         "publisher": "博碩文化",
-        "publishedAt": "2026 年 10 月",
+        "publishedAt": "2026/10",
         "description": {
           "overview": "在生成式AI的浪潮下，檢索增強生成（Retrieval-Augmented Generation，RAG）已成為大型語言模型（LLM）的關鍵技術。由於LLM受限於訓練資料的時效性與涵蓋範圍，面對即時議題時容易引用過時知識，而在處理企業內部問題時，也常因缺乏私有數據而產生幻覺現象（Hallucination），為了改善上述問題，RAG技術應運而生，透過在生成答案前先從外部資料庫檢索相關資料，並提供給LLM作為回答依據，成為目前業界最主流的解決方案。"
         },
         "coverAlt": "《輕鬆學會 RAG 實作開發》書封",
         "stores": {
-          "books": "博客來購買",
-          "tenlong": "天瓏書局購買"
+          "books": "博客來",
+          "tenlong": "天瓏書局",
+          "eslite": "誠品"
         }
       }
     },
@@ -157,8 +158,8 @@
     "title": "簡歷"
   },
   "common": {
-    "githubRepo": "[GitHub Repo.]",
-    "demoVideo": "[Demo 影片]",
+    "githubRepo": "GitHub Repo.",
+    "demoVideo": "Demo 影片",
     "projectLink": "[專案網頁連結]",
     "appStore": "[APP Store 連結]",
     "googlePlay": "[Google Play 連結]"
