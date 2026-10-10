@@ -35,20 +35,47 @@
 }
 
 .timeline-item-with-logo {
-  display: flex;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
   align-items: center;
   gap: 16px;
 }
 
+.timeline-logo-frame {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+}
+
 .timeline-logo {
-  width: 64px;
-  height: 64px;
-  flex-shrink: 0;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
 }
 
+.timeline-logo-frame--pegatron .timeline-logo {
+  width: 88px;
+  height: 44px;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+}
+
+.timeline-logo-frame--ntut .timeline-logo {
+  width: 72px;
+  height: 43px;
+}
+
+.timeline-logo-frame--scu .timeline-logo {
+  width: 62px;
+  height: 62px;
+}
+
 .timeline-content {
-  flex: 1;
+  min-width: 0;
 }
 
 .timeline-item-title {
@@ -89,6 +116,99 @@
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+/**
+ * #PUBLICATIONS
+ */
+
+.publication-entry {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  grid-template-areas:
+    "cover title"
+    "cover meta"
+    "description description"
+    "links links";
+  align-items: start;
+  column-gap: 16px;
+  row-gap: 10px;
+}
+
+.publication-cover {
+  grid-area: cover;
+  margin: 0;
+  width: 72px;
+  justify-self: start;
+}
+
+.publication-cover img {
+  width: 100%;
+  border: 1px solid var(--jet);
+  border-radius: 8px;
+  box-shadow: var(--shadow-1);
+}
+
+.publication-title {
+  grid-area: title;
+  min-width: 0;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.publication-meta {
+  grid-area: meta;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 6px;
+  color: var(--vegas-gold);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.publication-meta span,
+.publication-meta time {
+  display: inline;
+}
+
+.publication-description {
+  grid-area: description;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.publication-links {
+  grid-area: links;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.publication-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--white-1);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  text-decoration: underline;
+  text-decoration-color: var(--orange-yellow-crayola);
+  text-underline-offset: 3px;
+}
+
+.publication-link:hover,
+.publication-link:focus-visible {
+  color: var(--vegas-gold);
+}
+
+.publication-link ion-icon {
+  display: inline-block;
+  font-size: 15px;
 }
 
 /**
