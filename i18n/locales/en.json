@@ -88,8 +88,9 @@
         },
         "coverAlt": "Cover of Easy RAG Implementation",
         "stores": {
-          "books": "Buy on Books.com.tw",
-          "tenlong": "Buy at Tenlong Bookstore"
+          "eslite": "Eslite Bookstore",
+          "books": "Books.com.tw",
+          "tenlong": "Tenlong Bookstore"
         }
       }
     },
@@ -157,10 +158,10 @@
     "title": "CV"
   },
   "common": {
-    "githubRepo": "[GitHub Repo.]",
-    "demoVideo": "[Demo Video]",
-    "projectLink": "[Project Website]",
-    "appStore": "[APP Store]",
-    "googlePlay": "[Google Play]"
+    "githubRepo": "GitHub Repo.",
+    "demoVideo": "Demo Video",
+    "projectLink": "Project Website",
+    "appStore": "APP Store",
+    "googlePlay": "Google Play"
   }
 }
