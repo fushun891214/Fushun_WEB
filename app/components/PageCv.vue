@@ -10,7 +10,7 @@ const cvSrc = computed(() =>
 <template>
   <article class="cv" data-page="cv">
     <header>
-      <h1 class="h2 article-title">{{ $t('seo.cv.heading') }}</h1>
+      <h1 class="h2 article-title">{{ $t('cv.title') }}</h1>
     </header>
 
     <section class="cv-content">

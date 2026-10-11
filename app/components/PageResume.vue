@@ -1,7 +1,7 @@
 <template>
   <article class="resume" data-page="resume">
     <header>
-      <h1 class="h2 article-title">{{ $t("seo.resume.heading") }}</h1>
+      <h1 class="h2 article-title">{{ $t("resume.title") }}</h1>
     </header>
 
     <section class="timeline">
