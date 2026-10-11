@@ -1,7 +1,21 @@
 {
   "seo": {
-    "title": "Fu-Shun Chang | AI Engineer & Full-Stack Developer",
-    "description": "Fu-Shun Chang's portfolio: AI Engineer and Full-Stack Developer with experience in backend development, cloud services, and LLM applications."
+    "home": {
+      "title": "Fu-Shun Chang | AI Engineer & Full-Stack Developer",
+      "description": "Fu-Shun Chang's portfolio: AI Engineer and Full-Stack Developer with experience in backend development, cloud services, and LLM applications."
+    },
+    "resume": {
+      "title": "Fu-Shun Chang Resume | AI Engineer & Full-Stack Developer",
+      "description": "Fu-Shun Chang's work history, RAG publication, and iTalkuTalk and HomeEasy project experience."
+    },
+    "transcripts": {
+      "title": "Fu-Shun Chang Academic Transcripts | AI Engineer",
+      "description": "Academic transcript records from Soochow University and National Taipei University of Technology."
+    },
+    "cv": {
+      "title": "Fu-Shun Chang CV | AI Engineer & Full-Stack Developer",
+      "description": "Fu-Shun Chang's professional CV and career summary."
+    }
   },
   "sidebar": {
     "name": "FU-SHUN CHANG",
