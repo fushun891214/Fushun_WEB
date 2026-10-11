@@ -10,7 +10,7 @@ const isExpanded = ref(false)
       </figure>
 
       <div class="info-content">
-        <h1 class="name">{{ $t('sidebar.name') }}</h1>
+        <p class="name">{{ $t('sidebar.name') }}</p>
         <div class="title-list">
           <p class="title">{{ $t('sidebar.aiTitle') }}</p>
           <p class="title">{{ $t('sidebar.title') }}</p>
