@@ -15,5 +15,5 @@ useSeoMeta({
 </script>
 
 <template>
-  <PagePortfolio />
+  <PageTranscripts />
 </template>

@@ -34,14 +34,14 @@ test('each generated route renders only its own page article and exposes route l
   const routes = [
     ['index.html', 'about', '張富順｜AI工程師・全端開發'],
     ['resume/index.html', 'resume', '張富順履歷｜AI工程師・全端開發'],
-    ['transcripts/index.html', 'portfolio', '張富順學業成績｜AI工程師・全端開發'],
+    ['transcripts/index.html', 'transcripts', '張富順學業成績｜AI工程師・全端開發'],
     ['cv/index.html', 'cv', '張富順簡歷｜AI工程師・全端開發'],
   ]
 
   for (const [file, expectedPage, expectedTitle] of routes) {
     const html = await readGeneratedRoute(file)
     assert.ok(html.includes(`<title>${expectedTitle}</title>`))
-    for (const pageName of ['about', 'resume', 'portfolio', 'cv']) {
+    for (const pageName of ['about', 'resume', 'transcripts', 'cv']) {
       assert.equal(hasPageArticle(html, pageName), pageName === expectedPage)
     }
     for (const href of ['/', '/resume', '/transcripts', '/cv']) {

@@ -1,13 +1,13 @@
 <template>
-  <article class="portfolio" data-page="portfolio">
+  <article class="transcripts" data-page="transcripts">
     <header>
-      <h2 class="h2 article-title">{{ $t('portfolio.title') }}</h2>
+      <h2 class="h2 article-title">{{ $t('transcripts.title') }}</h2>
     </header>
 
     <section class="projects">
       <div class="transcript-section">
         <div class="transcript-item">
-          <h4 class="h4">{{ $t('portfolio.undergraduate') }}</h4>
+          <h4 class="h4">{{ $t('transcripts.undergraduate') }}</h4>
           <iframe
             src="https://drive.google.com/file/d/1x6KG0wfyhn3l8BxUbNuExm5QGhRpGS5u/preview"
             width="100%"
@@ -18,7 +18,7 @@
         </div>
 
         <div class="transcript-item">
-          <h4 class="h4">{{ $t('portfolio.graduate') }}</h4>
+          <h4 class="h4">{{ $t('transcripts.graduate') }}</h4>
           <iframe
             src="https://drive.google.com/file/d/12elL2Q7wpCJXIRANYHfhokcbRHI0OpR1/preview"
             width="100%"
@@ -29,7 +29,7 @@
         </div>
 
         <div class="transcript-item">
-          <h4 class="h4">{{ $t('portfolio.toeic') }}</h4>
+          <h4 class="h4">{{ $t('transcripts.toeic') }}</h4>
           <iframe
             src="https://drive.google.com/file/d/1cn7Se__A2mzFqkbpxQ4oiAXuJRGHWV6u/preview"
             width="100%"
