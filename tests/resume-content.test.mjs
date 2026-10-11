@@ -56,13 +56,13 @@ test('localized sidebar data includes both professional tags', async () => {
 test('resume renders work before education with local decorative assets', async () => {
   const source = await readProjectFile('app/components/PageResume.vue')
 
-  assert.ok(source.indexOf("$t('resume.work')") < source.indexOf("$t('resume.education')"))
+  assert.ok(source.indexOf('$t("resume.work")') < source.indexOf('$t("resume.education")'))
   assert.match(source, /src="\/images\/company-logos\/pegatron-logo\.jpg"/)
   assert.match(source, /<ion-icon name="briefcase-outline" aria-hidden="true"><\/ion-icon>/)
   assert.match(source, /<img\s+src="\/images\/company-logos\/pegatron-logo\.jpg"\s+alt=""/s)
 })
 
-test('resume presents a concise RAG publication after work with both purchase options', async () => {
+test('resume presents a concise RAG publication after work with all purchase options', async () => {
   const [zh, en, source] = await Promise.all([
     readProjectFile('i18n/locales/zh.json').then(JSON.parse),
     readProjectFile('i18n/locales/en.json').then(JSON.parse),
@@ -75,25 +75,27 @@ test('resume presents a concise RAG publication after work with both purchase op
       title: '輕鬆學會 RAG 實作開發：在 NVIDIA 微服務打造零幻覺的 LLM 與生成式 AI',
       authors: '黃士嘉、張富順',
       publisher: '博碩文化',
-      publishedAt: '2026 年 10 月',
+      publishedAt: '2026/10',
       description: {
         overview: '在生成式AI的浪潮下，檢索增強生成（Retrieval-Augmented Generation，RAG）已成為大型語言模型（LLM）的關鍵技術。由於LLM受限於訓練資料的時效性與涵蓋範圍，面對即時議題時容易引用過時知識，而在處理企業內部問題時，也常因缺乏私有數據而產生幻覺現象（Hallucination），為了改善上述問題，RAG技術應運而生，透過在生成答案前先從外部資料庫檢索相關資料，並提供給LLM作為回答依據，成為目前業界最主流的解決方案。',
       },
       coverAlt: '《輕鬆學會 RAG 實作開發》書封',
       stores: {
-        books: '博客來購買',
-        tenlong: '天瓏書局購買',
+        eslite: '誠品',
+        books: '博客來',
+        tenlong: '天瓏書局',
       },
     },
   })
   assert.equal(en.resume.publications.title, 'Publications')
-  assert.equal(en.resume.publications.ragBook.stores.books, 'Buy on Books.com.tw')
-  assert.equal(en.resume.publications.ragBook.stores.tenlong, 'Buy at Tenlong Bookstore')
+  assert.equal(en.resume.publications.ragBook.stores.eslite, 'Eslite Bookstore')
+  assert.equal(en.resume.publications.ragBook.stores.books, 'Books.com.tw')
+  assert.equal(en.resume.publications.ragBook.stores.tenlong, 'Tenlong Bookstore')
   assert.equal(en.resume.publications.ragBook.description.chapters, undefined)
 
-  const workIndex = source.indexOf("$t('resume.work')")
-  const publicationsIndex = source.indexOf("$t('resume.publications.title')")
-  const educationIndex = source.indexOf("$t('resume.education')")
+  const workIndex = source.indexOf('$t("resume.work")')
+  const publicationsIndex = source.indexOf('$t("resume.publications.title")')
+  const educationIndex = source.indexOf('$t("resume.education")')
 
   assert.ok(workIndex < publicationsIndex)
   assert.ok(publicationsIndex < educationIndex)
@@ -102,14 +104,14 @@ test('resume presents a concise RAG publication after work with both purchase op
   assert.match(source, /src="\/images\/book-covers\/rag-implementation-book-cover\.jpg"/)
   assert.match(source, /href="https:\/\/www\.books\.com\.tw\/products\/0011063512\?sloc=main"/)
   assert.match(source, /href="https:\/\/www\.tenlong\.com\.tw\/products\/9786264146333\?list_name=b-r7-zh_tw"/)
-  assert.match(source, /target="_blank" rel="noopener noreferrer"/)
-  assert.match(source, /\$t\('resume\.publications\.ragBook\.description\.overview'\)/)
+  assert.match(source, /target="_blank"\s+rel="noopener noreferrer"/)
+  assert.match(source, /\$t\("resume\.publications\.ragBook\.description\.overview"\)/)
   assert.doesNotMatch(source, /resume\.publications\.ragBook\.description\.chapters/)
 
   await access(path.join(projectRoot, 'public/images/book-covers/rag-implementation-book-cover.jpg'))
 })
 
-test('resume aligns work, publication, and education artwork in a shared media column', async () => {
+test('resume keeps the intentional wide logo frame alongside publication artwork', async () => {
   const [source, resumeCss, responsiveCss] = await Promise.all([
     readProjectFile('app/components/PageResume.vue'),
     readProjectFile('app/assets/css/resume.css'),
@@ -119,7 +121,7 @@ test('resume aligns work, publication, and education artwork in a shared media c
   assert.match(source, /class="timeline-logo-frame timeline-logo-frame--pegatron"/)
   assert.match(source, /class="timeline-logo-frame timeline-logo-frame--ntut"/)
   assert.match(source, /class="timeline-logo-frame timeline-logo-frame--scu"/)
-  assert.match(resumeCss, /\.timeline-logo-frame\s*\{[^}]*width:\s*72px;[^}]*height:\s*72px;/s)
+  assert.match(resumeCss, /\.timeline-logo-frame\s*\{[^}]*width:\s*90px;[^}]*height:\s*72px;/s)
   assert.match(resumeCss, /\.publication-cover\s*\{[^}]*width:\s*72px;/s)
   assert.match(resumeCss, /\.publication-cover\s*\{[^}]*justify-self:\s*start;/s)
   assert.match(

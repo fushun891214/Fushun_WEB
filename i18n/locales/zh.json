@@ -1,7 +1,21 @@
 {
   "seo": {
-    "title": "張富順｜AI工程師・全端開發",
-    "description": "張富順的個人作品集，AI工程師，具備全端開發、後端開發、雲端服務與 LLM 應用開發能力。"
+    "home": {
+      "title": "張富順｜AI工程師・全端開發",
+      "description": "張富順的個人作品集，AI工程師，具備全端開發、後端開發、雲端服務與 LLM 應用開發能力。"
+    },
+    "resume": {
+      "title": "張富順履歷｜AI工程師・全端開發",
+      "description": "張富順的工作經歷、RAG 著作與 iTalkuTalk、HomeEasy 專案開發經驗。"
+    },
+    "transcripts": {
+      "title": "張富順學業成績｜AI工程師・全端開發",
+      "description": "張富順的東吳大學與臺北科技大學學業成績紀錄。"
+    },
+    "cv": {
+      "title": "張富順簡歷｜AI工程師・全端開發",
+      "description": "張富順的個人簡歷與專業經歷摘要。"
+    }
   },
   "sidebar": {
     "name": "張富順",
@@ -17,7 +31,7 @@
   "nav": {
     "about": "關於我",
     "resume": "履歷",
-    "portfolio": "成績",
+    "transcripts": "成績",
     "cv": "簡歷"
   },
   "about": {
@@ -148,7 +162,7 @@
       }
     }
   },
-  "portfolio": {
+  "transcripts": {
     "title": "成績",
     "undergraduate": "大學成績單",
     "graduate": "研究所成績單",
