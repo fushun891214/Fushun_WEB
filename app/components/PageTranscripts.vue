@@ -1,7 +1,7 @@
 <template>
   <article class="transcripts" data-page="transcripts">
     <header>
-      <h1 class="h2 article-title">{{ $t('seo.transcripts.heading') }}</h1>
+      <h1 class="h2 article-title">{{ $t('transcripts.title') }}</h1>
     </header>
 
     <section class="projects">

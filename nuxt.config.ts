@@ -36,8 +36,8 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'website' }
       ],
       link: [
-        { rel: 'icon', href: '/images/favicon.png', type: 'image/png', sizes: '512x512' },
-        { rel: 'shortcut icon', href: '/images/favicon.png', type: 'image/png' },
+        { rel: 'icon', href: '/images/logo.jpg', type: 'image/jpeg' },
+        { rel: 'shortcut icon', href: '/images/logo.jpg', type: 'image/jpeg' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap' }
