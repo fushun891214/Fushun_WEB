@@ -20,6 +20,10 @@ async function readGeneratedRoute(relativePath) {
   return readFile(path.join(projectRoot, '.output/public', relativePath), 'utf8')
 }
 
+async function readProjectFile(relativePath) {
+  return readFile(path.join(projectRoot, relativePath), 'utf8')
+}
+
 function hasPageArticle(html, pageName) {
   return new RegExp(`<article\\b[^>]*\\bdata-page="${pageName}"`, 'u').test(html)
 }
@@ -44,4 +48,16 @@ test('each generated route renders only its own page article and exposes route l
       assert.match(html, new RegExp(`<a[^>]+href="${href}"`, 'u'))
     }
   }
+})
+
+test('navbar uses the transcripts translation key for the transcripts route', async () => {
+  const [zh, en, navbar] = await Promise.all([
+    readProjectFile('i18n/locales/zh.json').then(JSON.parse),
+    readProjectFile('i18n/locales/en.json').then(JSON.parse),
+    readProjectFile('app/components/AppNavbar.vue'),
+  ])
+
+  assert.equal(zh.nav.transcripts, '成績')
+  assert.equal(en.nav.transcripts, 'Transcripts')
+  assert.match(navbar, /\{ key: 'transcripts', to: '\/transcripts' \}/)
 })

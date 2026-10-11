@@ -5,7 +5,7 @@ const isSettingsOpen = ref(false)
 const navigationItems = [
   { key: 'about', to: '/' },
   { key: 'resume', to: '/resume' },
-  { key: 'portfolio', to: '/transcripts' },
+  { key: 'transcripts', to: '/transcripts' },
   { key: 'cv', to: '/cv' },
 ]
 
