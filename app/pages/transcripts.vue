@@ -5,6 +5,10 @@ definePageMeta({
 
 const { t } = useI18n()
 
+useHead({
+  link: [{ rel: 'canonical', href: 'https://fushun181.com/transcripts' }],
+})
+
 useSeoMeta({
   title: () => t('seo.transcripts.title'),
   ogTitle: () => t('seo.transcripts.title'),
