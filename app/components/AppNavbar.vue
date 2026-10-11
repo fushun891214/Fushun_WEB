@@ -1,65 +1,36 @@
 <script setup>
-defineProps(['activePage'])
-const emit = defineEmits(['changePage'])
-
 const { locale, setLocale } = useI18n()
+const route = useRoute()
 const isSettingsOpen = ref(false)
+const navigationItems = [
+  { key: 'about', to: '/' },
+  { key: 'resume', to: '/resume' },
+  { key: 'portfolio', to: '/transcripts' },
+  { key: 'cv', to: '/cv' },
+]
 
 function changeLang(lang) {
   setLocale(lang)
   isSettingsOpen.value = false
 }
 
-onMounted(() => {
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('[data-settings]')) {
-      isSettingsOpen.value = false
-    }
-  })
-})
+function closeSettings(event) {
+  if (!event.target.closest('[data-settings]')) {
+    isSettingsOpen.value = false
+  }
+}
+
+onMounted(() => document.addEventListener('click', closeSettings))
+onUnmounted(() => document.removeEventListener('click', closeSettings))
 </script>
 
 <template>
   <nav class="navbar">
     <ul class="navbar-list">
-      <li class="navbar-item">
-        <button
-          class="navbar-link"
-          :class="{ active: activePage === 'about' }"
-          @click="emit('changePage', 'about')"
-        >
-          <span>{{ $t('nav.about') }}</span>
-        </button>
-      </li>
-
-      <li class="navbar-item">
-        <button
-          class="navbar-link"
-          :class="{ active: activePage === 'resume' }"
-          @click="emit('changePage', 'resume')"
-        >
-          <span>{{ $t('nav.resume') }}</span>
-        </button>
-      </li>
-
-      <li class="navbar-item">
-        <button
-          class="navbar-link"
-          :class="{ active: activePage === 'portfolio' }"
-          @click="emit('changePage', 'portfolio')"
-        >
-          <span>{{ $t('nav.portfolio') }}</span>
-        </button>
-      </li>
-
-      <li class="navbar-item">
-        <button
-          class="navbar-link"
-          :class="{ active: activePage === 'cv' }"
-          @click="emit('changePage', 'cv')"
-        >
-          <span>{{ $t('nav.cv') }}</span>
-        </button>
+      <li v-for="item in navigationItems" :key="item.to" class="navbar-item">
+        <NuxtLink class="navbar-link" :class="{ active: route.path === item.to }" :to="item.to">
+          <span>{{ $t(`nav.${item.key}`) }}</span>
+        </NuxtLink>
       </li>
 
       <li class="navbar-item settings-item">

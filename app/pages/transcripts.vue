@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  pageTransition: { name: 'page', mode: 'out-in' },
+})
+
 const { t } = useI18n()
 
 useSeoMeta({
