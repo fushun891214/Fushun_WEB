@@ -50,6 +50,27 @@ test('each generated route renders only its own page article and exposes route l
   }
 })
 
+test('homepage exposes Google site-name structured data and every route exposes its site name', async () => {
+  await generateStaticSite()
+
+  const html = await readGeneratedRoute('index.html')
+  const siteNameScript = html.match(/<script type="application\/ld\+json">([^<]+)<\/script>/u)
+
+  assert.ok(siteNameScript)
+  assert.deepEqual(JSON.parse(siteNameScript[1]), {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: '張富順｜AI 工程師・全端開發',
+    alternateName: 'fushun181.com',
+    url: 'https://fushun181.com/',
+  })
+
+  for (const route of ['index.html', 'resume/index.html', 'transcripts/index.html', 'cv/index.html']) {
+    const routeHtml = await readGeneratedRoute(route)
+    assert.match(routeHtml, /<meta property="og:site_name" content="張富順｜AI 工程師・全端開發">/u)
+  }
+})
+
 test('navbar uses the transcripts translation key for the transcripts route', async () => {
   const [zh, en, navbar] = await Promise.all([
     readProjectFile('i18n/locales/zh.json').then(JSON.parse),

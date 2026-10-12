@@ -7,6 +7,18 @@ const { t } = useI18n()
 
 useHead({
   link: [{ rel: 'canonical', href: 'https://fushun181.com/' }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: '張富順｜AI 工程師・全端開發',
+        alternateName: 'fushun181.com',
+        url: 'https://fushun181.com/',
+      }),
+    },
+  ],
 })
 
 useSeoMeta({
