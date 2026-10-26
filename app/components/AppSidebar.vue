@@ -39,16 +39,6 @@ const isExpanded = ref(false)
 
         <li class="contact-item">
           <div class="icon-box">
-            <ion-icon name="phone-portrait-outline"></ion-icon>
-          </div>
-          <div class="contact-info">
-            <p class="contact-title">{{ $t('sidebar.phone') }}</p>
-            <a href="tel:+886968733583" class="contact-link">0968733583</a>
-          </div>
-        </li>
-
-        <li class="contact-item">
-          <div class="icon-box">
             <ion-icon name="calendar-outline"></ion-icon>
           </div>
           <div class="contact-info">
